@@ -112,3 +112,11 @@ class ParkingLot {
         }
         int getAvailableSlots() const { return availableSlots; }
 };
+
+class Payment {
+    private:
+        double amount;
+        string paymentMethod;
+    public:
+        Payment(double amount, string paymentMethod) : amount(amount), paymentMethod(paymentMethod) {}
+};
