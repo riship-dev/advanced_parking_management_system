@@ -135,3 +135,11 @@ class Payment {
             return duration * rate;
         }
 };
+
+class Admin {
+    private:
+        int adminID;
+        string name;
+    public:
+        Admin(int adminID, string name) : adminID(adminID), name(name) {}
+};
