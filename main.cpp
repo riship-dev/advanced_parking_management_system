@@ -18,6 +18,8 @@ class Vehicle {
         
         string getLicensePlate() const { return licensePlate; }
         string getType() const { return type; }
+        time_t getEntryTime() const { return entryTime; }
+        time_t getExitTime() const { return exitTime; }
         
         virtual void park() { cout << "Vehicle with license plate " << licensePlate << " is parked." << endl; }
         virtual void exit() {
