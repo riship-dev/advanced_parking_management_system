@@ -2,6 +2,7 @@
 #include <string>
 #include <ctime>
 #include <vector>
+#include <cmath>
 using namespace std;
 
 class Vehicle {
@@ -121,7 +122,7 @@ class Payment {
                 rate = 20.0;
             }
 
-            return duration * rate;
+            return round(duration * rate * 100.0) / 100.0;
         }
 };
 
