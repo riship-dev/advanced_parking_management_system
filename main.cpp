@@ -44,3 +44,9 @@ class Car : public Vehicle {
     public:
         Car(string licensePlate) : Vehicle(licensePlate, "Car"), seats(5) {}
 };
+class Bike : public Vehicle {
+    private:
+        int engineCapacity;
+    public:
+        Bike(string licensePlate) : Vehicle(licensePlate, "Bike"), engineCapacity(150) {}
+};
