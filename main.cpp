@@ -142,4 +142,6 @@ class Admin {
         string name;
     public:
         Admin(int adminID, string name) : adminID(adminID), name(name) {}
+        
+        void manageParking() { cout << "Admin " << name << " is managing the parking system." << endl; }
 };
