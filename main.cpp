@@ -144,4 +144,5 @@ class Admin {
         Admin(int adminID, string name) : adminID(adminID), name(name) {}
         
         void manageParking() { cout << "Admin " << name << " is managing the parking system." << endl; }
+        void generateReport(double totalRevenue) { cout << "Total revenue generated: $" << totalRevenue << endl; }
 };
