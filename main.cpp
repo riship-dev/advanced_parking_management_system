@@ -110,4 +110,5 @@ class ParkingLot {
             slot->freeSlot();
             availableSlots++;
         }
+        int getAvailableSlots() const { return availableSlots; }
 };
