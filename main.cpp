@@ -119,4 +119,19 @@ class Payment {
         string paymentMethod;
     public:
         Payment(double amount, string paymentMethod) : amount(amount), paymentMethod(paymentMethod) {}
+
+        double calculateCharge(time_t entryTime, time_t exitTime, string vehicleType) {
+            double duration = difftime(exitTime, entryTime) / 3600;
+            double rate = 0;
+
+            if (vehicleType == "Car") {
+                rate = 10.0;
+            } else if (vehicleType == "Bike") {
+                rate = 5.0;
+            } else if (vehicleType == "Bus") {
+                rate = 20.0;
+            }
+
+            return duration * rate;
+        }
 };
