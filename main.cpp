@@ -38,3 +38,9 @@ class Vehicle {
             cout << "Vehicle with license plate " << licensePlate << " is exiting." << endl;
         }
 };
+class Car : public Vehicle {
+    private:
+        int seats;
+    public:
+        Car(string licensePlate) : Vehicle(licensePlate, "Car"), seats(5) {}
+};
