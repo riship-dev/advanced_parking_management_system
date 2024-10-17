@@ -81,3 +81,16 @@ class ParkingSlot {
         }
         bool getIsOccupied() const { return isOccupied; }
 };
+class ParkingLot {
+    private:
+        string location;
+        int totalSlots;
+        int availableSlots;
+        vector <ParkingSlot> slots;
+    public:
+        ParkingLot(string location, int totalSlots) : location(location), totalSlots(totalSlots), availableSlots(totalSlots) {
+            for (int i = 1; i <= totalSlots; i++) {
+                slots.push_back(ParkingSlot(i, "Any"));
+            }
+        }
+};
