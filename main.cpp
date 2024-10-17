@@ -94,7 +94,7 @@ class ParkingLot {
             }
         }
 
-        ParkingSlot* allocateSlot(Vehicle* vehicle) {
+        ParkingSlot* allocateSlot(Vehicle *vehicle) {
             for (auto& slot : slots) {
                 if (!slot.getIsOccupied()) {
                     if (slot.assignSlot(vehicle)) {
@@ -105,5 +105,9 @@ class ParkingLot {
             }
             cout << "No available slot for vehicle with license plate: " << vehicle->getLicensePlate() << endl;
             return nullptr;
+        }
+        void freeSlot(ParkingSlot *slot) {
+            slot->freeSlot();
+            availableSlots++;
         }
 };
