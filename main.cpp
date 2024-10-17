@@ -64,4 +64,15 @@ class ParkingSlot {
         string vehicleTypeAllowed;
     public:
         ParkingSlot(int slotID, string vehicleTypeAllowed) : slotID(slotID), vehicleTypeAllowed(vehicleTypeAllowed), isOccupied(false) {}
+        
+        bool assignSlot(Vehicle* vehicle) {
+            if (!isOccupied && vehicleTypeAllowed == vehicle->getType()) {
+                isOccupied = true;
+                cout << "Slot " << slotID << " assigned to vehicle with license plate: " << vehicle->getLicensePlate() << endl;
+                return true;
+            } else {
+                cout << "Slot " << slotID << " is either occupied or not suitable for the vehicle type." << endl;
+                return false;
+            }
+        }
 };
