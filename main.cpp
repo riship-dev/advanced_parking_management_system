@@ -56,3 +56,12 @@ class Bus : public Vehicle {
     public:
         Bus(string licensePlate) : Vehicle(licensePlate, "Bus"), capacity(50) {}
 };
+
+class ParkingSlot {
+    private:
+        int slotID;
+        bool isOccupied;
+        string vehicleTypeAllowed;
+    public:
+        ParkingSlot(int slotID, string vehicleTypeAllowed) : slotID(slotID), vehicleTypeAllowed(vehicleTypeAllowed), isOccupied(false) {}
+};
