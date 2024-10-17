@@ -75,4 +75,8 @@ class ParkingSlot {
                 return false;
             }
         }
+        void freeSlot() {
+            isOccupied = false;
+            cout << "Slot " << slotID << " is now free." << endl;
+        }
 };
