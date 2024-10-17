@@ -4,19 +4,6 @@
 #include <vector>
 using namespace std;
 
-class Vehicle;
-class Car; // class Car : public Vehicle;
-class Bike; // class Bike : public Vehicle;
-class Bus; // class Bus : public Vehicle;
-class ParkingSlot;
-class ParkingLot;
-class Payment;
-class Admin;
-
-int main() {
-
-}
-
 class Vehicle {
     private:
         string licensePlate;
@@ -146,3 +133,7 @@ class Admin {
         void manageParking() { cout << "Admin " << name << " is managing the parking system." << endl; }
         void generateReport(double totalRevenue) { cout << "Total revenue generated: $" << totalRevenue << endl; }
 };
+
+int main() {
+    
+}
