@@ -79,4 +79,5 @@ class ParkingSlot {
             isOccupied = false;
             cout << "Slot " << slotID << " is now free." << endl;
         }
+        bool getIsOccupied() const { return isOccupied; }
 };
